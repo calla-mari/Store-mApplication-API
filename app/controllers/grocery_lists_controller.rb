@@ -1,4 +1,4 @@
-class GroceryListsController < ApplicationController
+class GroceryListsController < ProtectedController
   before_action :set_grocery_list, only: %i[update destroy]
 
   # GET /grocery_lists
@@ -15,11 +15,10 @@ class GroceryListsController < ApplicationController
 
   # POST /grocery_lists
   def create
-    puts grocery_list_params
-    @grocery_list = current_user.GroceryList.build(grocery_list_params)
+    @grocery_list = current_user.grocery_lists.build(grocery_list_params)
 
     if @grocery_list.save
-      render json: @grocery_list, status: :created
+      render json: @grocery_list, status: :created, location: @grocery_list
     else
       render json: @grocery_list.errors, status: :unprocessable_entity
     end
