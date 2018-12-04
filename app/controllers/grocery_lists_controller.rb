@@ -43,7 +43,7 @@ class GroceryListsController < ProtectedController
   
   # Use callbacks to share common setup or constraints between actions.
   def set_grocery_list
-    @grocery_list = current_user.GroceryList.find(params[:id])
+    @grocery_list = current_user.grocery_lists.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.
