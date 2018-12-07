@@ -48,7 +48,7 @@ class GroceryListsController < ProtectedController
 
   # Only allow a trusted parameter "white list" through.
   def grocery_list_params
-    params.require(:grocery_list).permit(:checkbox, :item, :amount)
+    params.require(:grocery_list).permit(:store, :checkbox, :department, :item, :amount)
   end
 
   private :set_grocery_list, :grocery_list_params
