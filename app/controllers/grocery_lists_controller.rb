@@ -3,14 +3,15 @@ class GroceryListsController < ProtectedController
 
   # GET /grocery_lists
   def index
-    @grocery_lists = GroceryList.all
+    # @grocery_lists = GroceryList.all
+    @grocery_lists = current_user.grocery_lists
 
     render json: @grocery_lists
   end
 
   # GET /grocery_lists/1
   def show
-    render json: @grocery_list.find(params[:id])
+    render json: GroceryList.find(params[:id])
   end
 
   # POST /grocery_lists
