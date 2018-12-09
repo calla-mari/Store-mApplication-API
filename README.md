@@ -76,12 +76,12 @@ The process started with planning a user story and ERD, then the wireframe just 
 
 ## Installation Guide
 
-## Front End Installation (this repo)
+## Front End Installation (https://github.com/calla-mari/Store-mApplication-Client)
 1. Fork and Clone this repository.
 2. Install dependencies with `npm install`.
 3. Run the development server with npm start.
 
-## Back end Installation (https://github.com/calla-mari/Store-mApplication-API)
+## Back end Installation (this repo)
 
 1. Fork and Clone this repository.
 2. Install dependencies with `bundle install.`
